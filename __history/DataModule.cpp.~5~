@@ -1,0 +1,24 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "DataModule.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma classgroup "Vcl.Controls.TControl"
+#pragma link "DBAccess"
+#pragma link "MemDS"
+#pragma link "Ora"
+#pragma link "OraCall"
+#pragma link "DBXDevartOracle"
+#pragma resource "*.dfm"
+TDSPSectoare *DSPSectoare;
+//---------------------------------------------------------------------------
+__fastcall TDSPSectoare::TDSPSectoare(TComponent* Owner)
+	: TDataModule(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+

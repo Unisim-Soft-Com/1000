@@ -1,0 +1,51 @@
+//---------------------------------------------------------------------------
+
+#ifndef DataModuleH
+#define DataModuleH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include "DBAccess.hpp"
+#include "MemDS.hpp"
+#include "Ora.hpp"
+#include "OraCall.hpp"
+#include <Data.DB.hpp>
+#include <Data.FMTBcd.hpp>
+#include <Data.SqlExpr.hpp>
+#include <Data.Win.ADODB.hpp>
+#include <Datasnap.DBClient.hpp>
+#include <Datasnap.Provider.hpp>
+//---------------------------------------------------------------------------
+class TDSPSectoare : public TDataModule
+{
+__published:	// IDE-managed Components
+	TADOConnection *ADOConnection1;
+	TADODataSet *QRedRapListGrup;
+	TDataSource *DSRedRapListGrup;
+	TClientDataSet *DSCRedRapListaSpec;
+	TADODataSet *QRedRapListaSpec;
+	TDataSource *DSRedRapListaSpec;
+	TDataSetProvider *DSPRedRapListaSpec;
+	TADODataSet *QObiectAcvatic;
+	TDataSource *DSObiectAcvatic;
+	TADODataSet *QSectoare;
+	TDataSource *DSSectoare;
+	TDataSetProvider *DSPSectoare;
+	TADODataSet *QProbe_H;
+	TDataSource *DSProbe_H;
+	TDataSetProvider *DSPProbe_H;
+	TClientDataSet *DSCSectoare;
+	TClientDataSet *DSCProbe_H;
+	TADODataSet *QSpecii;
+	TDataSource *DataSource1;
+	TDataSetProvider *DSPSpecii;
+	TClientDataSet *DSCSpecii;
+	TADODataSet *QAddSpecie;
+	TDataSource *DSAddSpecie;
+private:	// User declarations
+public:		// User declarations
+	__fastcall TDSPSectoare(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TDSPSectoare *DSPSectoare;
+//---------------------------------------------------------------------------
+#endif

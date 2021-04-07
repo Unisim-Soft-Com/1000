@@ -1,0 +1,51 @@
+object AddSpecieForm: TAddSpecieForm
+  Left = 0
+  Top = 0
+  Caption = 'AddSpecieForm'
+  ClientHeight = 299
+  ClientWidth = 635
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 56
+    Width = 609
+    Height = 209
+    DataSource = RedRapListGrup.DSAddSpecie
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'COD_L'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'COD_N'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DENUMIREA'
+        Width = 420
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'MASA'
+        Visible = True
+      end>
+  end
+end

@@ -1,0 +1,41 @@
+//---------------------------------------------------------------------------
+
+#ifndef DataModuleH
+#define DataModuleH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Data.Win.ADODB.hpp>
+#include <Datasnap.DBClient.hpp>
+#include <Datasnap.Provider.hpp>
+#include <Data.DB.hpp>
+//---------------------------------------------------------------------------
+class TDSPSectoare : public TDataModule
+{
+__published:	// IDE-managed Components
+	TADOConnection *ADOConnection1;
+	TADODataSet *QRedRapListGrup;
+	TDataSource *DSRedRapListGrup;
+	TADODataSet *QRedRapListaSpec;
+	TDataSource *DSRedRapListaSpec;
+	TADODataSet *QObiectAcvatic;
+	TDataSource *DSObiectAcvatic;
+	TADODataSet *QSectoare;
+	TDataSource *DSSectoare;
+	TADODataSet *QProbe_H;
+	TDataSource *DSProbe_H;
+	TDataSetProvider *DSPProbe_H;
+	TClientDataSet *DSCProbe_H;
+	TADODataSet *QSpecii;
+	TDataSource *DSSpecii;
+	TDataSetProvider *DSPSpecii;
+	TClientDataSet *DSCSpecii;
+	TADODataSet *QAddSpecie;
+	TDataSource *DSAddSpecie;
+private:	// User declarations
+public:		// User declarations
+	__fastcall TDSPSectoare(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TDSPSectoare *DSPSectoare;
+//---------------------------------------------------------------------------
+#endif

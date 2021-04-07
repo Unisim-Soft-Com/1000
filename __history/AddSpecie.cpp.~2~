@@ -1,0 +1,17 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "AddSpecie.h"
+#include "DataModule.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TAddSpecieForm *AddSpecieForm;
+//---------------------------------------------------------------------------
+__fastcall TAddSpecieForm::TAddSpecieForm(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------

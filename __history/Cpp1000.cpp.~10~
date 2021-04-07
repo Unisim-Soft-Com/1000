@@ -1,0 +1,40 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+#include <tchar.h>
+//---------------------------------------------------------------------------
+USEFORM("DataModule.cpp", DSPSectoare); /* TDataModule: File Type */
+USEFORM("Main.cpp", MainForm);
+USEFORM("Redact.cpp", RedactForm);
+USEFORM("AddSpecie.cpp", Form1);
+//---------------------------------------------------------------------------
+int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
+{
+	try
+	{
+		Application->Initialize();
+		Application->MainFormOnTaskBar = true;
+		Application->CreateForm(__classid(TMainForm), &MainForm);
+		Application->CreateForm(__classid(TDSPSectoare), &DSPSectoare);
+		Application->CreateForm(__classid(TRedactForm), &RedactForm);
+		Application->Run();
+	}
+	catch (Exception &exception)
+	{
+		Application->ShowException(&exception);
+	}
+	catch (...)
+	{
+		try
+		{
+			throw Exception("");
+		}
+		catch (Exception &exception)
+		{
+			Application->ShowException(&exception);
+		}
+	}
+	return 0;
+}
+//---------------------------------------------------------------------------

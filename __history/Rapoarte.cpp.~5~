@@ -1,0 +1,1066 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Rapoarte.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TFormRapoarte *FormRapoarte;
+//---------------------------------------------------------------------------
+__fastcall TFormRapoarte::TFormRapoarte(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+
+//---------------------------------------------------------------------------
+void __fastcall TFormRapoarte::FormShow(TObject *Sender)
+{
+	Panel1 -> Top  = 80;
+	Panel1 -> Left = 10;
+	Panel1 -> Width  = FormRapoarte -> Width  - 40;
+	Panel1 -> Height = FormRapoarte -> Height - 180;
+	Panel2 -> Top  = 80;
+	Panel2 -> Left = 10;
+	Panel2 -> Width  = FormRapoarte -> Width  - 40;
+	Panel2 -> Height = FormRapoarte -> Height - 180;
+	Panel3 -> Top  = 80;
+	Panel3 -> Left = 10;
+	Panel3 -> Width  = FormRapoarte -> Width  - 40;
+	Panel3 -> Height = FormRapoarte -> Height - 180;
+	Panel4 -> Top  = 80;
+	Panel4 -> Left = 10;
+	Panel4 -> Width  = FormRapoarte -> Width  - 40;
+	Panel4 -> Height = FormRapoarte -> Height - 180;
+	Panel1 -> Enabled = true;
+	Panel2 -> Enabled = false;
+	Panel3 -> Enabled = false;
+	Panel4 -> Enabled = false;
+	Panel1 -> Visible = true;
+	Panel2 -> Visible = false;
+	Panel3 -> Visible = false;
+	Panel4 -> Visible = false;
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormRapoarte::BtNextClick(TObject *Sender)
+{
+if (BitBtn3 ->Enabled == true && BitBtn4 ->Enabled == false)
+	{
+		BitBtn4 ->Enabled = True;
+		Panel1 -> Enabled = false;
+		Panel2 -> Enabled = false;
+		Panel3 -> Enabled = false;
+		Panel4 -> Enabled = true;
+
+		Panel1 -> Visible = false;
+		Panel2 -> Visible = false;
+		Panel3 -> Visible = false;
+		Panel4 -> Visible = true;
+	}
+if (BitBtn2 ->Enabled == true && BitBtn3 ->Enabled == false)
+	{
+		BitBtn3 ->Enabled = True;
+		Panel1 -> Enabled = false;
+		Panel2 -> Enabled = false;
+		Panel3 -> Enabled = true;
+		Panel4 -> Enabled = false;
+
+		Panel1 -> Visible = false;
+		Panel2 -> Visible = false;
+		Panel3 -> Visible = true;
+		Panel4 -> Visible = false;
+	}
+if (BitBtn1 ->Enabled == true && BitBtn2 ->Enabled == false)
+	{
+		BitBtn2 ->Enabled = True;
+		Panel1 -> Enabled = false;
+		Panel2 -> Enabled = true;
+		Panel3 -> Enabled = false;
+		Panel4 -> Enabled = false;
+
+		Panel1 -> Visible = false;
+		Panel2 -> Visible = true;
+		Panel3 -> Visible = false;
+		Panel4 -> Visible = false;
+	}
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormRapoarte::BtBackClick(TObject *Sender)
+{
+if (BitBtn3 ->Enabled == false && BitBtn2 ->Enabled == true)
+	{
+		BitBtn2 ->Enabled = false;
+
+		Panel1 -> Enabled = true;
+		Panel2 -> Enabled = false;
+		Panel3 -> Enabled = false;
+		Panel4 -> Enabled = false;
+
+		Panel1 -> Visible = true;
+		Panel2 -> Visible = false;
+		Panel3 -> Visible = false;
+		Panel4 -> Visible = false;
+	}
+if (BitBtn4 ->Enabled == false && BitBtn3 ->Enabled == true)
+	{
+		BitBtn3 ->Enabled = false;
+
+		Panel1 -> Enabled = false;
+		Panel2 -> Enabled = true;
+		Panel3 -> Enabled = false;
+		Panel4 -> Enabled = false;
+
+		Panel1 -> Visible = false;
+		Panel2 -> Visible = true;
+		Panel3 -> Visible = false;
+		Panel4 -> Visible = false;
+	}
+if (BitBtn4 ->Enabled)
+	{
+		BitBtn4 ->Enabled = false;
+
+		Panel1 -> Enabled = false;
+		Panel2 -> Enabled = false;
+		Panel3 -> Enabled = true;
+		Panel4 -> Enabled = false;
+
+		Panel1 -> Visible = false;
+		Panel2 -> Visible = false;
+		Panel3 -> Visible = true;
+		Panel4 -> Visible = false;
+	}
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormRapoarte::BtResetClick(TObject *Sender)
+{
+	 Panel1 -> Enabled = true;
+	 BitBtn2 ->Enabled = false;
+	 BitBtn3 ->Enabled = false;
+	 BitBtn4 ->Enabled = false;
+
+	 Panel1 -> Visible = true;
+	 Panel2 -> Visible = false;
+	 Panel3 -> Visible = false;
+	 Panel4 -> Visible = false;
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormRapoarte::BitBtn1Click(TObject *Sender)
+{
+	 BitBtn2 ->Enabled = false;
+	 BitBtn3 ->Enabled = false;
+	 BitBtn4 ->Enabled = false;
+
+	 Panel1 -> Enabled = true;
+	 BitBtn2 ->Enabled = false;
+	 BitBtn3 ->Enabled = false;
+	 BitBtn4 ->Enabled = false;
+
+	 Panel1 -> Visible = true;
+	 Panel2 -> Visible = false;
+	 Panel3 -> Visible = false;
+	 Panel4 -> Visible = false;
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormRapoarte::BitBtn2Click(TObject *Sender)
+{
+	 BitBtn3 ->Enabled = false;
+	 BitBtn4 ->Enabled = false;
+
+	 Panel1 -> Enabled = false;
+	 Panel2 -> Enabled = true;
+	 Panel3 -> Enabled = false;
+	 Panel4 -> Enabled = false;
+
+	 Panel1 -> Visible = false;
+	 Panel2 -> Visible = true;
+	 Panel3 -> Visible = false;
+	 Panel4 -> Visible = false;
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormRapoarte::BitBtn3Click(TObject *Sender)
+{
+	 BitBtn4 ->Enabled = false;
+
+	 Panel1 -> Enabled = false;
+	 Panel2 -> Enabled = false;
+	 Panel3 -> Enabled = true;
+	 Panel4 -> Enabled = false;
+
+	 Panel1 -> Visible = false;
+	 Panel2 -> Visible = false;
+	 Panel3 -> Visible = true;
+	 Panel4 -> Visible = false;
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormRapoarte::BitBtn4Click(TObject *Sender)
+{
+	 Panel1 -> Enabled = false;
+	 Panel2 -> Enabled = false;
+	 Panel3 -> Enabled = false;
+	 Panel4 -> Enabled = true;
+
+	 Panel1 -> Visible = false;
+	 Panel2 -> Visible = false;
+	 Panel3 -> Visible = false;
+	 Panel4 -> Visible = true;
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormRapoarte::P1CalcN1Click(TObject *Sender)
+{
+/*
+  method pushButton(var eventInfo Event)
+var
+ t1,t2,t3,t4 tcursor
+ tt,te table
+ q1,q2,q3,q4,q5 query
+ ddyear,dd1b,dd1e,dd2b,dd2e,dd3b,dd3e date
+ syear string
+ lyear,i,j longint
+ id,im,iy smallint
+tv      TableView
+endVar
+i=0
+;t1.open(":1000:r_temp.DB")
+;t2.open(":1000:r_temp1.DB")
+;t3.open(":1000:r_temp2.DB")
+;t1.edit()
+;t4.open(":1000:r_temp3.DB")
+;te.attach(":1000:r_temp3.DB")
+;te.empty()
+;t4.empty();
+delete("r_temp3.db")
+empty(":1000:r_temp3.DB")
+ddyear=date()
+lyear=longint(DatBeg)
+iy=ddyear.year ( )
+q1=Query
+ANSWER: :Priv:Answer.db
+
+OPTIONS: NO AUXILIARY TABLES
+lista spec.DB | Cod_l  | Cod_n        | Masa   |
+				  | _join7 | Check _join6 | Check  |
+
+probe_h.DB | Cod sectorul         | Cod    | Data   | Locul sect | Adancimea |
+			  | Check _join3, _join5 | _join4 | Check >=~lyear | Check      | blank     |
+
+probe_l.DB | Cod prob Sect | Cod prob N | Cod specii Tip | Cod specii N |
+			  | _join5        | _join4     | _join7         | _join6       |
+
+probe_l.DB | Deinstetate |
+			  | Check _nn   |
+
+EndQuery
+if q1.executeQBE()=false then errorshow() return endif
+
+;FIELDORDER: Sectoare.DB->"Codul OA", Sectoare.DB->"Denumirea",
+;Sectoare.DB->"IndPeSect", lista spec_f.DB->"Grupa", r_temp.DB->"Cod_n", r_temp.DB->"Masa",
+;r_temp.DB->"Data", r_temp.DB->"Locul sect", r_temp.DB->"Deinstetate"
+
+q1=Query
+ANSWER: :Work:r_temp.db
+
+OPTIONS: NO AUXILIARY TABLES
+Sectoare.DB | Cod    | Codul OA    | Denumirea       | IndPeSect |
+				| _join3 | Check as OA | Check as Sector | Check     |
+
+lista spec_f.DB | Cod_l | Cod_N  | Grupa  |
+					 | f     | _join6 | Check  |
+
+:Priv:Answer.db | Cod_n                      | Masa   | Cod sectorul | Data   | Locul sect | Deinstetate |
+					 | Check as Denumirea, _join6! | Check  | _join3       | Check  | Check      | Check       |
+
+EndQuery
+
+if q1.executeQBE()=false then errorshow() return endif
+
+; rascet colicestva vziatii prob na 1 datu
+
+q4=Query
+
+OPTIONS: NO AUXILIARY TABLES
+Obiectele acvatice.db | Cod                 |
+							 | Check _join2, as OA |
+
+probe_h.DB | Cod sectorul   | Cod    | Data                       |  Locul sect |
+			  | _join3, _join5 | _join4 | Check      | calc count  |
+
+Sectoare.DB | Cod    | Codul OA | Denumirea       |
+				| _join3 | _join2   | Check as Sector |
+
+EndQuery
+
+if q4.executeQBE("r_temp_1.db")=false then errorshow() return endif
+
+;t2.empty();delete("r_temp1.db")
+
+q2=Query
+
+OPTIONS: NO AUXILIARY TABLES
+r_temp.DB | OA     | Sector | Denumirea | Masa   | Data   | Locul sect       | Deinstetate   | IndPeSect | Grupa  |
+			 | Check  | Check  | Check     | Check  | Check  | calc 1 as Period | calc sum as D | Check     | Check  |
+
+EndQuery
+
+if q2.executeQBE("r_temp1.DB")=false then errorshow() return endif
+
+; delim dd/cc
+
+q5=Query
+ANSWER: :PRIV:ANSWER.DB
+
+OPTIONS: NO AUXILIARY TABLES
+R_temp1.db | OA     | Sector | Data   | D                     |
+			  | _join1 | _join2 | _join3 | _dd, changeto _dd/_cc |
+
+r_temp_1.DB | OA     | Data   | Sector | Count of Locul sect |
+				| _join1 | _join3 | _join2 | _cc                 |
+
+EndQuery
+
+if q5.executeQBE()=false then errorshow() return endif
+
+while lyear <= iy
+syear=string(lyear)
+
+dd1b=date(1,1,lyear)
+dd1e=date(12,31,lyear)
+;t1.empty();delete("r_temp.db")
+
+
+;----------------------
+dd1b=date(3,1,lyear)
+dd1e=date(5,31,lyear)
+dd2b=date(6,1,lyear)
+dd2e=date(8,31,lyear)
+dd3b=date(9,1,lyear)
+dd3e=date(11,30,lyear)
+
+;delete(":1000:r_temp2.db")
+;t3.empty();
+
+q3=Query
+
+FIELDORDER: R_temp1.db->"OA", R_temp1.db->"Denumirea", R_temp1.db->"Sector", 9, 8,
+R_temp1.db->"Masa", R_temp1.db->"IndPeSect", R_temp1.db->"Grupa", 7
+
+SORT: R_temp1.db->"OA", R_temp1.db->"Denumirea", R_temp1.db->"Sector",
+R_temp1.db->"Masa", R_temp1.db->"IndPeSect", R_temp1.db->"Grupa", 7, 8, 9
+
+OPTIONS: NO AUXILIARY TABLES
+R_temp1.db | OA     | Sector | Denumirea | Masa   |
+			  | Check  | Check  | Check     | Check  |
+			  | Check  | Check  | Check     | Check  |
+			  | Check  | Check  | Check     | Check  |
+
+R_temp1.db | Data                                   | IndPeSect | Grupa  |
+			  | >=~dd1b, <=~dd1e, calc ~syear as Data1 | Check     | Check  |
+			  | >=~dd2b, <=~dd2e, calc ~syear as Data1 | Check     | Check  |
+			  | >=~dd3b, <=~dd3e, calc ~syear as Data1 | Check     | Check  |
+
+R_temp1.db | D                      | Period          |
+			  | calc average as D      | calc "2" as Per |
+			  | calc average as D      | calc "3" as Per |
+			  | calc average as D      | calc "4" as Per |
+
+EndQuery
+
+if q3.executeQBE("r_temp2.DB")=false then errorshow() return endif;":1000:r_temp2.DB")
+
+tt.attach("r_temp2.DB")
+tt.add("r_temp3.DB", true,false)
+;if i=0 then
+;  i=1
+;  tt.copy(":1000:r_temp3.DB")
+;  else
+;	tt.add(":1000:r_temp3.DB", false,true)
+;endIf
+tt.unattach()
+lyear=lyear+1
+endwhile
+;t1.close()
+
+q1=Query
+ANSWER: :1000:r_temp4.db
+
+OPTIONS: NO AUXILIARY TABLES
+SORT: r_temp3.DB->"Data1", r_temp3.DB->"Sector", r_temp3.DB->"OA",
+lista spec.DB->"Denumirea", r_temp3.DB->"Per", r_temp3.DB->"IndPeSect", r_temp3.DB->"Grupa", 9, 8
+
+r_temp3.DB | OA     | Denumirea | Sector | Per    | Data1  |
+			  | Check  | _join1    | Check  | Check  | Check  |
+
+r_temp3.DB | Masa                      | IndPeSect | Grupa  |
+			  | _m, calc _m*_dd*1000 as B | Check     | Check  |
+
+r_temp3.DB | D                  |
+			  | _dd, calc _dd as N |
+
+lista spec.DB | Cod_l | Cod_n  | Denumirea |
+				  | f     | _join1 | Check     |
+
+EndQuery
+
+if q1.executeQBE() then errorshow() endif
+
+tt.attach("r_temp4.DB")
+  INDEX tt              ; create new primary index for Customer.db
+	 PRIMARY
+	 ON "OA",  "Denumirea","Sector","Per","Data1"
+  ENDINDEX
+tt.unattach()
+
+tv.open("r_temp4.DB")
+endMethod
+
+*/
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormRapoarte::P2CalcN2Click(TObject *Sender)
+{
+/*
+method pushButton(var eventInfo Event)
+var
+ tr table
+ t1,t2,t3,t4,tnew,tt1,tqq tcursor
+ tt,te table
+ q1,q2,q3,q4,q5,qq query
+ ddyear,dd1b,dd1e,dd2b,dd2e,dd3b,dd3e date
+
+ syear,s1,s2,s3,s4,stn,s21,stp,s11,razn string
+
+ lyear,i,j,itp longint
+ id,im,iy smallint
+tv      TableView
+endVar
+
+t1.open("o_periods")
+;t1.attach(o_periods)
+t1.home()
+tnew.open("o_tNsp1")
+tnew.edit()
+tnew.empty()
+
+;deletefile
+if true then
+qq=Query
+ANSWER: :work:t1.DB
+
+OPTIONS: NO AUXILIARY TABLES
+r_temp4.DB | OA     | Sector           | Data1  | IndPeSect |
+			  | Check  | calc count as CC | Check  | Check     |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+
+qq=Query
+ANSWER: :work:t2.DB
+
+OPTIONS: NO AUXILIARY TABLES
+r_temp4.DB | OA     | Data1  | IndPeSect | Grupa  | B        | N        |
+			  | Check  | Check  | Check     | Check  | calc sum | calc sum |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+qq=Query
+ANSWER: :PRIV:ANSWER.DB
+
+OPTIONS: NO AUXILIARY TABLES
+t2.DB | OA     | Data1  | IndPeSect | Sum of B            |
+		| _join1 | _join2 | _join3    | _b, changeto _b/_cc |
+
+t2.DB | Sum of N            |
+		| _n, changeto _n/_cc |
+
+t1.DB | OA     | Data1  | IndPeSect | CC  |
+		| _join1 | _join2 | _join3    | _cc |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+qq=Query
+ANSWER: :WORK:t1.DB
+
+r_temp4.DB | OA     | Per              | Data1  | IndPeSect |
+			  | Check  | calc count as CC | Check  | Check     |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+qq=Query
+ANSWER: :work:t3.DB
+
+OPTIONS: NO AUXILIARY TABLES
+t1.DB | OA     | Data1  | IndPeSect | CC  |
+		| _join1 | _join2 | _join3    | _cc |
+
+t2.DB | OA           | Data1        | IndPeSect    | Grupa  | Sum of B        |
+		| Check _join1 | Check _join2 | Check _join3 | Check  | _b, calc _b/_cc |
+
+t2.DB | Sum of N        |
+		| _n, calc _n/_cc |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+qq=Query
+ANSWER: :work:t1.db
+
+OPTIONS: NO AUXILIARY TABLES
+t3.DB | OA     | Data1  | IndPeSect  |
+		| Check  | Check  | calc count |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+qq=Query
+ANSWER: :work:t2.DB
+
+OPTIONS: NO AUXILIARY TABLES
+t3.DB | OA     | Data1  | Grupa  | Sum of B / CC |
+		| Check  | Check  | Check  | calc sum                |
+
+t3.DB | Sum of N / CC |
+		| calc sum                |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+qq=Query
+ANSWER: :PRIV:ANSWER.DB
+
+t2.DB | OA     | Data1  | Sum of Sum of B / CC  | Sum of Sum of N / CC  |
+		| _join1 | _join2 | _sb, changeto _sb/_cc | _sn, changeto _sn/_cc |
+
+t1.DB | OA     | Data1  | Count of IndPeSect |
+		| _join1 | _join2 | _cc                |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+qq=Query
+ANSWER: :PRIV:ANSWER.DB
+
+t2.DB | OA     | Data1  | Grupa  | Sum of Sum of B / CC |
+		| _join1 | _join2 | _join3 | _sb                  |
+
+t2.DB | Sum of Sum of N / CC |
+		| _sn                  |
+
+t3.DB  | OA     | Data1  | IndPeSect | Grupa  | Sum of B / CC | Sum of N / CC |
+Insert | _join1 | _join2 | a         | _join3 | _sb           | _sn           |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+endif
+;return
+;tt1.open("t1.db")
+
+
+for itp from 2 to 2
+
+scan t1:
+
+s1=t1."OA"
+s2=t1."SI"
+s11=t1."Class"
+
+if s2="" then s21="a" else s21=s2 endif
+
+for i from 1 to 20
+t1.fieldvalue(string(i),s3)
+if s3<>"" then
+
+switch
+	case itp=1:
+q1=Query
+ANSWER: :PRIV:ANSWER.DB
+
+OPTIONS: NO AUXILIARY TABLES
+r_temp4.DB | OA  | Denumirea         | Data1 | IndPeSect | Grupa   |
+			  | ~s1 | calc count as Nsp | ~s3   | ~s21       | _join1  |
+
+lista grup_f.db | Sifr    | Denumirea      |
+					 | _join1! | Check as Grupa |
+
+EndQuery
+stp="Nsp"
+	case itp=2:
+
+qq=Query
+
+OPTIONS: NO AUXILIARY TABLES
+t3.DB | OA  | IndPeSect  | Data1                 |
+		| ~s1 | ~s21			 | ~s3, calc count as CC |
+
+EndQuery
+if qq.executeQBE(tqq) = false then errorshow() endif
+
+razn=tqq."CC"
+
+
+q1=Query
+ANSWER: :PRIV:ANSWER.DB
+
+OPTIONS: NO AUXILIARY TABLES
+t3.DB | OA  | Data1 | IndPeSect | Grupa   | Sum of B / CC   | Sum of N / CC   |
+		| ~s1 | ~s3   | ~s21       | _join1  | calc sum as Nsp | calc sum as N1  |
+
+lista grup_f.db | Sifr    | Denumirea      |
+					 | _join1! | Check as Grupa |
+
+EndQuery
+
+;q1.executeQBE()
+stp="N+B"
+
+endSwitch
+
+q1.executeQBE()
+
+t4.open(":PRIV:ANSWER.DB")
+ scan t4:
+  if tnew.locate("Class",s11,"Tip",stp,"OA",s1,"SI",s21,"Grupa",t4."Grupa") = false then
+		if tnew.insertrecord()=false then
+			 msgStop("Stop!", "Sorry, Can’t add record "+s1+s21+t4."Grupa")
+			else
+			;msgInfo ( "Ok!","Add record "+s1+s2+t4."Grupa")
+			endif
+		tnew."Class"=s11
+		tnew."Tip"=stp
+		tnew."OA"=s1
+		tnew."SI"=s21
+		tnew."Grupa"=t4."Grupa"
+		tnew.unlockrecord()
+		endif
+	 if itp=1 then
+	  tnew.setfieldvalue(string(i),t4."Nsp")
+	  else
+		; tt1.
+		if number(razn)>0 then
+		 tnew.setfieldvalue(string(i*2-1),t4."N1"/number(razn))
+		 tnew.setfieldvalue(string(i*2),t4."Nsp"/number(razn))
+		 endif
+	  endif
+ endscan
+t4.close()
+
+
+
+endif
+endfor
+endscan
+
+endfor
+tnew.close()
+
+endMethod
+
+
+*/
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormRapoarte::P2CalcN3Click(TObject *Sender)
+{
+/*
+method pushButton(var eventInfo Event)
+var
+ tr table
+ t1,t2,t3,t4,tnew,tt1,tqq tcursor
+ tt,te table
+ q1,q2,q3,q4,q5,qq query
+ ddyear,dd1b,dd1e,dd2b,dd2e,dd3b,dd3e date
+
+ syear,s1,s2,s3,s4,stn,s21,stp,s11,razn,s31,s32 string
+
+ lyear,i,j,itp longint
+ id,im,iy smallint
+tv      TableView
+endVar
+
+t1.open("o_periods")
+;t1.attach(o_periods)
+t1.home()
+tnew.open("o_tNsp_statii")
+tnew.edit()
+tnew.empty()
+
+;deletefile
+;if not true then
+if not false then
+qq=Query
+ANSWER: :work:t4.DB
+
+OPTIONS: NO AUXILIARY TABLES
+r_temp4.DB | OA     | Sector | Per    | Data1  | IndPeSect | B             |
+			  | Check  | Check  | Check  | Check  | Check     | calc sum as B |
+
+r_temp4.DB | N             |
+			  | calc sum as N |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+endif
+
+;return
+;tt1.open("t1.db")
+
+scan t1:; for t1."OA"="D2" and t1."Class"="6" and t1."SI"="i":  ; po vsem periodam
+
+s1=t1."OA"
+s2=t1."SI"
+s11=t1."Class"
+
+if s2="" then s21="a" else s21=s2 endif
+
+for i from 1 to 20
+t1.fieldvalue(string(i),s3)
+if s3<>"" then
+qq=Query
+ANSWER: :PRIV:ANSWER.DB
+
+OPTIONS: NO AUXILIARY TABLES
+t4.DB | OA        | Sector | Per    | Data1     | IndPeSect | B      | N      |
+		| Check ~s1 | Check  | Check  | ~s3 | Check ~s2 | calc sum as B  | calc sum as N  |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+qq=Query
+
+OPTIONS: NO AUXILIARY TABLES
+t4.DB | OA  |  Data1                 | IndPeSect |
+		| ~s1 |  ~s3, calc count as CC |    ~s2 |
+
+EndQuery
+if qq.executeQBE(tqq) = false then errorshow() endif
+razn=tqq."CC"
+
+t4.open(":PRIV:ANSWER.DB")
+ scan t4:; for t4."OA"=s1 and t4."IndPeSect"=s21:
+ s31=t4."Per"
+ s32=t4."Sector"
+
+  if tnew.locate("Class",s11,"OA",s1,"Sezon",t4."Per","SI",s21,"Statia",t4."Sector") = false then
+		if tnew.insertrecord()=false then
+			 msgStop("Stop!", "Sorry, Can’t add record "+s1+s21+t4."Grupa")
+			else
+			;msgInfo ( "Ok!","Add record "+s1+s2+t4."Grupa")
+			endif
+		tnew."Class"=s11
+		tnew."Sezon"=t4."Per"
+		tnew."OA"=s1
+		tnew."SI"=s21
+		tnew."Statia"=t4."Sector"
+		tnew.unlockrecord()
+		endif
+		if number(razn)>0 then
+		 tnew.setfieldvalue(string(i*2-1),t4."N"/number(razn))
+		 tnew.setfieldvalue(string(i*2),t4."B"/number(razn))
+	  endif
+ endscan
+t4.close()
+
+
+
+endif
+endfor
+endscan
+
+;endfor
+tnew.close()
+
+qq=Query
+ANSWER: :PRIV:ANSWER.DB
+
+OPTIONS: NO AUXILIARY TABLES
+Sectoare.DB | Denumirea | Nr Statii |
+				| _join1    | _nn       |
+
+o_tNsp_statii.DB | Nr           | Statia |
+					  | changeto _nn | _join1 |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+endMethod
+
+
+*/
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormRapoarte::P3Bt1Click(TObject *Sender)
+{
+/*
+method pushButton(var eventInfo Event)
+var
+ tt,td tcursor
+ qq query
+ pp, oo,pp2 string
+ rr report
+endVar
+pp=per1
+pp2=per2
+oo=oa1
+
+qq=Query
+ANSWER: :Work:T1.DB
+
+OPTIONS: NO AUXILIARY TABLES
+FIELDORDER: r_temp4.DB->"OA", r_temp4.DB->"B", lista spec.DB->"Cod_n",
+lista spec.DB->"Denumirea", r_temp4.DB->"Data1", 7, 8, lista spec_f.DB->"Grupa"
+
+SORT: lista spec.DB->"Cod_n", lista spec.DB->"Denumirea", r_temp4.DB->"OA",
+r_temp4.DB->"B", r_temp4.DB->"Data1", 7, 8, lista spec_f.DB->"Grupa"
+
+r_temp4.DB | OA        | Denumirea | Data1     |
+			  | Check ~oo | _join1    | Check ~pp |
+
+r_temp4.DB | B                                     |
+			  | Check calc "+" as Pr, calc "-" as Pr1 |
+
+lista spec.DB | Cod_l | Cod_n        | Denumirea     |
+				  | f     | Check _join2 | Check _join1! |
+
+lista spec_f.DB | Cod_l | Cod_N  | Grupa      |
+					 | f     | _join2 | Check  |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+qq= Query
+ANSWER: :PRIV:ANSWER.DB
+
+OPTIONS: NO AUXILIARY TABLES
+T1.db  | Cod_n | Denumirea | Grupa  |
+Insert | 0     | _join2    | _join1 |
+
+lista grup_f.db | Sifr   | Denumirea |
+					 | _join1 | _join2, not blank |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+
+qq=Query
+
+OPTIONS: NO AUXILIARY TABLES
+T1.db  | OA                  |
+		 | blank, changeto "~" |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+qq=Query
+
+OPTIONS: NO AUXILIARY TABLES
+T1.db | B     | Pr           |
+		| blank | changeto "-" |
+
+EndQuery
+;if qq.executeQBE() = false then errorshow() endif
+
+qq=Query
+
+OPTIONS: NO AUXILIARY TABLES
+T1.db | Data1 | Pr1          |
+		| ~pp2  | changeto "+" |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+qq=Query
+
+OPTIONS: NO AUXILIARY TABLES
+T1.db | B     | Pr          | Pr1         |
+		| blank | changeto "" | changeto "" |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+rr.open("alg")
+endMethod
+*/
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormRapoarte::P4DoItClick(TObject *Sender)
+{
+/*
+method pushButton(var eventInfo Event)
+var
+ tt,td tcursor
+ qq query
+ rr report
+endVar
+
+qq=Query
+ANSWER: :work:t1.DB
+
+OPTIONS: NO AUXILIARY TABLES
+lista spec_f.DB | Cod_l  | Cod_N  | G      | S_1 |
+					 | _join3 | _join2 | >0, _g | _s  |
+
+lista spec.DB | Cod_l  | Cod_n  | Denumirea    |
+				  | _join3 | _join2 | Check _join1 |
+
+r_temp4.DB | OA     | Denumirea | Sector | Per    | Data1  | IndPeSect | N                             |
+			  | Check  | _join1    | _join4 | Check  | Check  | Check     | _n, calc _n*_g, calc _n*_g*_s |
+
+Sectoare.DB | Denumirea | Sect4           |
+				| _join4    | Check as Sector |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+qq=Query
+ANSWER: :work:t2.DB
+
+OPTIONS: NO AUXILIARY TABLES
+t1.DB | OA     | Per    | Data1  | IndPeSect | Sector | N * G    |
+		| Check  | Check  | Check  | Check     | Check  | calc sum |
+
+t1.DB | N * G * S_1 |
+		| calc sum    |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+empty("r_INDsr.db")
+
+qq=Query
+ANSWER: :PRIV:ANSWER.DB
+
+OPTIONS: NO AUXILIARY TABLES
+t2.DB | OA     | Per    | Data1  | IndPeSect | Sector | Sum of N * G | Sum of N * G * S_1 |
+		| _join1 | _join2 | _join3 | _join4    | _join5 | _a           | _b                 |
+
+r_INDsr.DB | OA     | TipSect | Sector | Per    | Data1  | Sr    |
+Insert     | _join1 | _join4  | _join5 | _join2 | _join3 | _b/_a |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+qq=Query
+ANSWER: :PRIV:ANSWER.DB
+
+OPTIONS: NO AUXILIARY TABLES
+r_INDsr.db | OA     | TipSect | Sector | Data1  | Sr                 |
+			  | Check  | Check   | Check  | Check  | calc average as Sr |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+qq=Query
+ANSWER: :PRIV:ANSWER.DB
+
+OPTIONS: NO AUXILIARY TABLES
+r_INDsr.db | OA     | TipSect | Sector | Per | Data1  | Sr     |
+Insert     | _join1 | _join2  | _join3 | 5   | _join4 | _join5 |
+
+:PRIV:Answer.db | OA     | TipSect | Sector | Data1  | Sr     |
+					 | _join1 | _join2  | _join3 | _join4 | _join5 |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+qq=Query
+ANSWER: :PRIV:ANSWER.DB
+
+OPTIONS: NO AUXILIARY TABLES
+r_INDsr.db | OA       | TipSect    |
+			  | D4 or D5 | changeto i |
+
+EndQuery
+
+
+if qq.executeQBE() = false then errorshow() endif
+
+rr.open("r_INDsr")
+endMethod
+*/
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormRapoarte::Button5Click(TObject *Sender)
+{
+/*
+method pushButton(var eventInfo Event)
+var
+ tt,td tcursor
+ qq query
+ rr report
+endVar
+
+qq=Query
+ANSWER: :work:t1.DB
+
+OPTIONS: NO AUXILIARY TABLES
+r_temp4.DB | OA     | Sector | Per    | Data1  | IndPeSect | N        | B        |
+			  | Check  | Check  | Check  | Check  | Check     | calc sum | calc sum, calc count as Cnt |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+qq=Query
+ANSWER: :work:t2.DB
+
+OPTIONS: NO AUXILIARY TABLES
+r_temp4.DB | OA           | Denumirea | Sector | Per          | Data1         |
+			  | Check _join1 | Check     | _join6 | Check _join3 | Check _join41 |
+
+r_temp4.DB | IndPeSect    | N               | B               |
+			  | Check _join5 | _n, calc _n/_sn | _b, calc _b/_sb |
+
+t1.DB | OA     | Sector        | Per    | Data1   | IndPeSect | Sum of N | Sum of B | Cnt |
+		| _join1 | Check _join6  | _join3 | _join41 | _join5    | _sn      | _sb      | Check |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+tt.open("t2.db")
+tt.edit()
+scan tt:
+ if tt."N / Sum of N">0 then
+	 tt."N / Sum of N"=-tt."N / Sum of N"*ln(tt."N / Sum of N")/ln(2)
+ endif
+ if tt."B / Sum of B">0 then
+	 tt."B / Sum of B"=-tt."B / Sum of B"*ln(tt."B / Sum of B")/ln(2)
+ endif
+endScan
+
+qq=Query
+ANSWER: :work:t3.db
+
+OPTIONS: NO AUXILIARY TABLES
+t2.DB | OA     | Per    | Data1  | IndPeSect | Sector | N / Sum of N | B / Sum of B | Cnt   |
+		| Check  | Check  | Check  | Check     | Check  | calc sum     | calc sum     | Check |
+
+EndQuery
+if qq.executeQBE() = false then errorshow() endif
+
+
+empty("r_shanon.db")
+
+qq=Query
+ANSWER: :PRIV:ANSWER.DB
+
+OPTIONS: NO AUXILIARY TABLES
+Sectoare.DB | Denumirea | Sect4  |
+				| _join6    | _join7 |
+
+r_shanon.DB | OA     | TipSect | Sector | Per    | Data1  | Sr     | SrB    | Cnt  |
+Insert      | _join1 | _join4  | _join7 | _join5 | _join3 | _join2 | _join8 | _sdd |
+
+t3.DB | OA     | Per    | Data1  | IndPeSect | Sector | Sum of N / Sum of N | Sum of B / Sum of B | Cnt  |
+		| _join1 | _join5 | _join3 | _join4    | _join6 | _join2              | _join8              | _sdd |
+
+EndQuery
+
+if qq.executeQBE() = false then errorshow() endif
+
+rr.open("r_shanon")
+endMethod
+*/
+}
+//---------------------------------------------------------------------------

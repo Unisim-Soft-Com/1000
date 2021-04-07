@@ -1,0 +1,48 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Redact.h"
+#include "DataModule.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TRedactForm *RedactForm;
+//---------------------------------------------------------------------------
+__fastcall TRedactForm::TRedactForm(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TRedactForm::DBGGrupaCellClick(TColumn *Column)
+{
+	 //AnsiString ttt =   " and cod_l = " + DBGGrupa -> SelectedField -> AsString;
+
+				//ttt =   " and cod_l = " + DBGGrupa -> SelectedField -> AsString;
+
+	 //int r = DBGGrupa ->Row();
+	// AnsiString tr =    DBGGrupa ->Row ;
+ // -> FieldByName("SIFR") ->AsString();
+	//QRedRapListaSpec -> Filter = "and cod_l = " + DBGGrupa -> Columns[0] -> ToString();
+   //	ShowMessage(ttt);
+	//ShowMessage(tr);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TRedactForm::BtListSpeciiClick(TObject *Sender)
+{
+PnRedactProbe -> Visible = false;
+PnListSpecii  -> Visible = true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TRedactForm::BtRedactProbeClick(TObject *Sender)
+{
+PnRedactProbe -> Visible = true;
+PnListSpecii  -> Visible = false;
+}
+//---------------------------------------------------------------------------
+
+
+

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.469,=D:\Mihail\CPP 1000\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.212,=D:\Mihail\CPP 1000\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.025,=D:\Mihail\CPP 1000\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.290,=D:\Mihail\CPP_PROJECTS\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.540,=D:\Mihail\CPP_PROJECTS\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.072,=D:\Mihail\CPP 1000\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.998,D:\Mihail\CPP 1000\DataModule.cpp=D:\Mihail\CPP 1000\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.211,=D:\Mihail\CPP 1000\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.599,=D:\Mihail\CPP 1000\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.167,D:\Mihail\CPP 1000\1000.h=D:\Mihail\CPP_PROJECTS\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.632,D:\Mihail\CPP 1000\AddSpecie.dfm=D:\Mihail\CPP 1000\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.797,D:\Mihail\CPP 1000\Unit2.cpp=D:\Mihail\CPP 1000\Rapoarte.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.879,=D:\Mihail\CPP 1000\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.008,=D:\Mihail\CPP_PROJECTS\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.797,D:\Mihail\CPP 1000\Unit2.h=D:\Mihail\CPP 1000\Rapoarte.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.749,D:\Mihail\CPP 1000\Main.dfm=D:\Mihail\CPP_PROJECTS\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.632,D:\Mihail\CPP 1000\AddSpecie.h=D:\Mihail\CPP 1000\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.998,D:\Mihail\CPP 1000\DataModule.dfm=D:\Mihail\CPP 1000\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.490,=D:\Mihail\CPP_PROJECTS\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.797,D:\Mihail\CPP 1000\Unit2.dfm=D:\Mihail\CPP 1000\Rapoarte.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.998,D:\Mihail\CPP 1000\DataModule.h=D:\Mihail\CPP 1000\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.636,D:\Mihail\CPP 1000\Cpp1000.cbproj=D:\Mihail\CPP_PROJECTS\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.749,D:\Mihail\CPP 1000\Main.h=D:\Mihail\CPP_PROJECTS\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.749,D:\Mihail\CPP 1000\Main.cpp=D:\Mihail\CPP_PROJECTS\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.808,D:\Mihail\CPP 1000\Cpp1000.h=D:\Mihail\CPP 1000\1000.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.632,D:\Mihail\CPP 1000\AddSpecie.cpp=D:\Mihail\CPP 1000\Unit1.cpp</Transaction>
+  </Transactions>
+</BorlandProject>
